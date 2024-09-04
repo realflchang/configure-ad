@@ -111,7 +111,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://github.com/user-attachments/assets/df4eddce-5010-4416-adbc-58549df0b3fb" alt="Signing out to sign back in as Domain Admin" />
 <br /><br />
 
-<p>In Azure portal, we now set Client1 VM DNS to DC’s private IP address to join its domain. Go to the Client VM's Network settings, then Network interface ID:</p>
+<p>In Azure portal, we now set Client1 VM DNS to DC1’s private IP address to join its domain. Go to the Client VM's Network settings, then Network interface ID:</p>
 <img src="https://github.com/user-attachments/assets/3d3b70c5-3c89-4f2f-8b50-972484699708" alt="Client Network settings" />
 <br /><br />
 
@@ -121,11 +121,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://github.com/user-attachments/assets/6248aff6-ff51-452a-a8a8-3e92c9c36d5a" alt="Click Save" />
 <br /><br />
 
-<p>Restart our Client VM in Azure, and sign back in. In command prompt, running ipconfig /all now shows DNS Server pointing to our DC:</p>
+<p>Restart our Client VM in Azure, and sign back in. In command prompt, running ipconfig /all now shows DNS Server pointing to our DC1:</p>
 <img src="https://github.com/user-attachments/assets/b98f7a43-7b95-4ed3-bcb4-9969b1f43c75" alt="Client VM now has DNS to DC" />
 <br /><br />
 
-<p>Let's make the Client VM join the DC domain. In System properties, click on "To rename this computer or change its domain or workgroup;:</p>
+<p>Let's make the Client VM join the DC1 domain. In System properties, click on "To rename this computer or change its domain or workgroup:</p>
 <img src="https://github.com/user-attachments/assets/f0724fc1-22a9-4621-a3d2-43b46b4ae388" alt="System properties" />
 <br /><br />
 
@@ -143,7 +143,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://github.com/user-attachments/assets/24691e22-f70a-4abc-b8d2-3b1970022c51" alt="Save work before restarting" />
 <br /><br />
 
-<p>As Client VM restarts, going back to our DC Server Manager, Active Directory Users and Computers, under "Computers" we now see our client computer listed:</p>
+<p>As Client VM restarts, going back to our DC1 Server Manager, Active Directory Users and Computers, under "Computers" we now see our client computer listed:</p>
 <img src="https://github.com/user-attachments/assets/68b12862-5ca8-4c71-9b91-ba1f62a00e8a" alt="Client computer now appears in Active Directory" />
 <br /><br />
 
@@ -158,7 +158,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://github.com/user-attachments/assets/9284947c-c2e3-4db7-9542-e373ccb1f9c3" alt="Remote Desktop Users showing Domain Users" />
 <br /><br />
 
-<p>Back to our DC, Server Manager, let's create our users. In the real world, these would be our employees in a company or students in an university:</p>
+<p>Back to our DC1, Server Manager, let's create our users. In the real world, these would be our employees in a company or students in an university:</p>
 <img src="https://github.com/user-attachments/assets/f694829d-df16-4e37-91ab-90261a92ee39" alt="Creating sample users" />
 <br /><br />
 
@@ -171,7 +171,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>This confirms Client VM is accessible for any user from Domain Users group in the same domain as the Domain Controller.</p>
 <br /><br />
 
-<p>Note that in our Client VM, although we pointed the DNS to our DC, the computer can still resolve other domains. For example, I can still go to google.com or cnn.com. This is due to the DNS in DC having "Root Hints" with default DNS servers, in case the regular DNS in DC cannot resolve for client VM:</p>
+<p>Note that in our Client VM, although we pointed the DNS to our DC1, the computer can still resolve other domains. For example, I can still go to google.com or cnn.com. This is due to the DNS in DC having "Root Hints" with default DNS servers, in case the regular DNS in DC1 cannot resolve for client VM:</p>
 <img src="https://github.com/user-attachments/assets/32046a09-a095-4539-97ee-cfdeb94c694e" alt="Server Manager, DNS" />
 <img src="https://github.com/user-attachments/assets/6f4d81d7-d052-4682-b94d-2d39ff066770" alt="Root Hints default servers" />
 <br /><br />
