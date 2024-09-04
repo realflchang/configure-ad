@@ -5,10 +5,10 @@
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
-
+<!---
 <h2>Video Demonstration</h2>
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
+- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com) -->
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,12 +24,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1 - create a Domain Controller (DC1) in Azure 
+- Step 2 - create at least 1 Client VM in the same virtual network in Azure
+- Step 3 - set up Active Directory in the Domain Controller (DC1)
+- Step 4 - join the Client VM to the same domain
 
 <h2>Deployment and Configuration Steps</h2>
+
+<img src="https://github.com/user-attachments/assets/5c84f6bf-2c26-4600-b3f7-073e5835df38" alt="Azure Active Directory Diagram" />
+
+
+
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
