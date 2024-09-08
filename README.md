@@ -30,8 +30,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 4 - join the Client VM to the same domain
 
 <h2>Deployment and Configuration Steps</h2>
+<!---
+<img src="https://github.com/user-attachments/assets/5c84f6bf-2c26-4600-b3f7-073e5835df38" alt="Azure Active Directory Diagram" /> -->
+<img src="https://github.com/user-attachments/assets/b553c7cd-f703-4594-8327-9add1fc7ca62" alt="My Azure Active Directory Diagram" />
 
-<img src="https://github.com/user-attachments/assets/5c84f6bf-2c26-4600-b3f7-073e5835df38" alt="Azure Active Directory Diagram" />
 
 <p>I will create a VM running Windows Server, set it to static private IP, and install Active Directory. This will be our Domain Controller "DC1".</p>
 <br /><br />
